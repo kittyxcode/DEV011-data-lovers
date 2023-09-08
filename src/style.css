@@ -1,0 +1,12 @@
+
+
+@media screen and (max-width: 980px){
+    #color{
+        background-color: blueviolet;
+    }
+}
+@media screen and (min-width: 981) {
+    #color{
+        background-color: aquamarine;
+    }
+}
