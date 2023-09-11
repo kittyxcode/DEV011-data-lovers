@@ -5,8 +5,10 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <header>Pokedex
+    <header>
+      <h1>Pokedex</h1>
     </header>
     <main>
       <section id="filtro">
@@ -18,7 +20,27 @@
           <li></li>
         </ul>
       </section>
+      <div>
+        <button id="reset-button" data-testid="button-clear" type="button">Limpiar filtros</button>
+      </div>
+      <section id="root">
+        <ul>
+          <li>
+            <dl itemscope itemtype="pokemon">
+              <dt>Nombre:</dt><dd itemprop="name"></dd>
+              <dt>Número:</dt><dd itemprop="num"></dd>
+              <dt>Tipo:</dt><dd itemprop="type"></dd>
+              <dl itemprop="pokemon_size" itemscope itemtype="pokemon"></dl>
+                <dt>Altura:</dt><dd itemprop="height"></dd>
+                <dt>Peso:</dt><dd itemprop="weight"></dd>
+            </dl>
+          </li>
+        </ul>
+      </section>
     </main>
+    <footer>
+      <p>By: Katherine Pino & Isadora Vargas</p>
+    </footer>  
     <script src="main.js" type="module"></script>
   </body>
 </html>
