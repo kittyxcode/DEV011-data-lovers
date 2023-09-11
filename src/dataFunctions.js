@@ -1,10 +1,12 @@
 // estas funciones son de ejemplo
 
+//Creo que seria buena idea encapsular toda la llamada de fetch
+
+
 //obtenemos la ruta del archivo JSON
 const rutaArchivoJSON = "../data/pokemon/pokemon.json";
 
 //utilizar fetch para cargar archivo JSON
-// Utiliza fetch para cargar el archivo JSON
 fetch(rutaArchivoJSON)
   .then((response) => {
     if (!response.ok) {
@@ -15,6 +17,7 @@ fetch(rutaArchivoJSON)
   .then((data) => {
     // Haz algo con los datos JSON, por ejemplo, console.log(data)
     console.log(data);
+    console.log(data.pokemon[0].size.height);
   })
   .catch((error) => {
     console.error("Error:", error);
@@ -33,4 +36,5 @@ export const filterData = (data, filterBy, value) => {
   filterBy;
   value;
   alert("filterData nomas");
+
 };
