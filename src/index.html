@@ -10,8 +10,18 @@
     </header>
     <main>
       <section id="filtro">
-        <select name="" id="" data-testid="select-filter"></select>
-
+        <label for="select-sort">Filtrar por: </label>
+        <select name="" id="select-sort" data-testid="select-sort">
+          <option value="num">Todos</option>
+          <option value="type">Tipo</option>
+          <option value="weight">Peso</option>
+          <option value="height">Altura</option>
+        </select>
+        <label for=""filterBy>Descendente</label>
+        <input type="radio" name="filterBy" value="Descendente">
+        <label for=""filterBy>Ascendente</label>
+        <input type="radio" name="filterBy" value="Ascendente">
+        <button id="boton">Mostrar Pokemons</button>
       </section>
       <section id="root">
         <ul id="tarjetas">
