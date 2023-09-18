@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -12,12 +12,43 @@
     </header>
     <main>
       <section id="filtro">
-        <select name="" id="" data-testid="select-filter"></select>
+        <label for="select-sort">Filtrar por: </label>
+        <select name="" id="select-sort" data-testid="select-sort">
+          <option value="num">Todos</option>
+          <option value="type">Tipo</option>
+          <option value="weight">Peso</option>
+          <option value="height">Altura</option>
+        </select>
+        <label for="" filterBy>Descendente</label>
+        <input type="radio" name="sort-order" value="desc" checked/>
+        
+        <label for="" filterBy>Ascendente</label>
+        <input type="radio" name="sort-order" value="asc" />
 
+        <textarea name="" id="textarea" cols="30" rows="1"></textarea>
+        
+        <button id="buttonSearch">Buscar</button>
+        
+        <button id="reset-button" data-testid="button-clear" type="button">
+          Limpiar filtros
+        </button>
       </section>
       <section id="root">
         <ul id="tarjetas">
-          <li></li>
+          <li
+            <dl itemscope itemtype="pokemon">
+              <dt>Nombre:</dt>
+              <dd itemprop="name"></dd>
+              <dt>Número:</dt>
+              <dd itemprop="num"></dd>
+              <dt>Tipo:</dt>
+              <dd itemprop="type"></dd>
+              <dt>Altura:</dt>
+              <dd itemprop="height"></dd>
+              <dt>Peso:</dt>
+              <dd itemprop="weight"></dd>
+            </dl>
+          </li>
         </ul>
       </section>
       <div>
@@ -40,7 +71,7 @@
     </main>
     <footer>
       <p>By: Katherine Pino & Isadora Vargas</p>
-    </footer>  
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
