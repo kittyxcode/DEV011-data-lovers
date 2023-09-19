@@ -2,7 +2,7 @@
 
 //Creo que seria buena idea encapsular toda la llamada de fetch
 
-
+/*
 //obtenemos la ruta del archivo JSON
 const rutaArchivoJSON = "../data/pokemon/pokemon.json";
 
@@ -22,7 +22,7 @@ fetch(rutaArchivoJSON)
   .catch((error) => {
     console.error("Error:", error);
   });
-
+*/
 export const example = () => {
   return "example";
 };
@@ -32,9 +32,14 @@ export const anotherExample = () => {
 };
 
 export const filterData = (data, filterBy, value) => {
+  //trabajar funcionalidad de esto
+  //retornar data filtrada
+  
   data;
   filterBy;
   value;
-  alert("filterData nomas");
+  alert("filterData nomas");//prueba para ver si entra
+
+  
 
 };
