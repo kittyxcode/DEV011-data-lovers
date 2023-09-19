@@ -54,9 +54,9 @@ body {
   right:5rem;
 }
 #reset-button {
-    background-color: #4CAF50;
+    background-color: #90d55e;
     color: rgb(255, 255, 255);
-    border: 1px solid black;
+    border: 1px solid #449c3c;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -66,5 +66,7 @@ body {
     }
   
   #reset-button:hover {
-    background-color: #5a83ac;
+    background-color: #7ad8cd;
+    border: 1px solid #41b1a5;
+  }
 
