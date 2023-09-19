@@ -19,10 +19,10 @@
           <option value="weight">Peso</option>
           <option value="height">Altura</option>
         </select>
-        <label for="" filterBy>Descendente</label>
+        <label for="" filterby>Descendente</label>
         <input type="radio" name="sort-order" value="desc" checked/>
         
-        <label for="" filterBy>Ascendente</label>
+        <label for="" filterby>Ascendente</label>
         <input type="radio" name="sort-order" value="asc" />
 
         <textarea name="" id="textarea" cols="30" rows="1"></textarea>
@@ -35,7 +35,7 @@
       </section>
       <section id="root">
         <ul id="tarjetas">
-          <li
+          <li>
             <dl itemscope itemtype="pokemon">
               <dt>Nombre:</dt>
               <dd itemprop="name"></dd>
@@ -49,29 +49,12 @@
               <dd itemprop="weight"></dd>
             </dl>
           </li>
-        </ul>
-      </section>
-      <div>
-        <button id="reset-button" data-testid="button-clear" type="button">Limpiar filtros</button>
-      </div>
-      <section id="root">
-        <ul>
-          <li>
-            <dl itemscope itemtype="pokemon">
-              <dt>Nombre:</dt><dd itemprop="name"></dd>
-              <dt>Número:</dt><dd itemprop="num"></dd>
-              <dt>Tipo:</dt><dd itemprop="type"></dd>
-              <dl itemprop="pokemon_size" itemscope itemtype="pokemon"></dl>
-                <dt>Altura:</dt><dd itemprop="height"></dd>
-                <dt>Peso:</dt><dd itemprop="weight"></dd>
-            </dl>
-          </li>
-        </ul>
+        </ul>        
       </section>
     </main>
     <footer>
-      <p>By: Katherine Pino & Isadora Vargas</p>
-
+      <p>By: Katherine Pino &amp; Isadora Vargas</p>
     <script src="main.js" type="module"></script>
+    </footer>
   </body>
 </html>

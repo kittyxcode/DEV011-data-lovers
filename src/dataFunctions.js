@@ -43,7 +43,3 @@ export const filterData = (data, filterBy, value) => {
   
 
 };
-
-export const allPokemonChargeScreen(data){
-  return data;
-}

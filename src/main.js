@@ -7,13 +7,13 @@ import data from "./data/pokemon/pokemon.js";
 //capturar elemento dom
 const ulElement= document.querySelector("#tarjetas");
 
-const prueba= renderItems(data);
+const prueba= renderItems(data.pokemon);
 console.log(prueba);
 //console.log(ulElement);
 //
 ulElement.replaceWith(prueba);
 
-
+//function LoadAllPokemons(){}
 
 
 
