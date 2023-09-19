@@ -9,6 +9,7 @@ export const renderItems = (data) => {
     //crear el elemento Li
     const liElement = document.createElement("li");
     liElement.innerHTML = `
+    <img src="${pokemon.img}" alt="${pokemon.name}">
     <dl itemscope itemtype="pokemon">
       <dt>Nombre:</dt>
       <dd itemprop="name">${pokemon.name}</dd>
