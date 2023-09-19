@@ -5,15 +5,17 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <header>
+    <div class="contenedor-t">
+      <header>
+          <img src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex-t.png" alt="pokedex-t" class="pokedex-titulo">  
+          <img src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex.png" alt="pokedex-i" class="pokedex-imagen">
       <h1>Pokedex</h1>
     </header>
     <main>
       <section id="filtro">
         <label for="select-sort">Filtrar por: </label>
-        <select name="" id="select-sort" data-testid="select-sort">
+        <select name="" id="select-sort" data-testid="select-sort" class="contenedor-c">
           <option value="num">Todos</option>
           <option value="type">Tipo</option>
           <option value="weight">Peso</option>
@@ -52,8 +54,9 @@
         </ul>        
       </section>
     </main>
-    <footer>
+    <footer class="contenedor-f">
       <p>By: Katherine Pino &amp; Isadora Vargas</p>
+       <img src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/612ce4761b9679000402af1c.png" alt="pokemon-logo" class="pokemon-footer">
     <script src="main.js" type="module"></script>
     </footer>
   </body>

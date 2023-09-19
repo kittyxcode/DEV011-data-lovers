@@ -1,4 +1,58 @@
 
+body {
+  margin: 0;
+  padding: 0;
+}
+.contenedor-t {
+  position: static;
+  width: 100vw; /* Ancho igual al ancho de la ventana del navegador */
+  height: 15vh; /* Altura igual a la altura de la ventana del navegador */
+  background-color: #7ad8cd; /* Color de fondo del rectángulo */
+  border:0.5rem solid #41b1a5;
+  overflow: hidden; /* Evita que el rectángulo se desborde de la ventana */
+}
+.contenedor-c {
+  position: static;
+  width: 100vw; /* Ancho igual al ancho de la ventana del navegador */
+  height: 80vh; /* Altura igual a la altura de la ventana del navegador */
+  background-color: #ffffff; /* Color de fondo del rectángulo */
+  border:0.5rem solid #41b1a5;
+  overflow: auto; /* Evita que el rectángulo se desborde de la ventana */
+}
+.contenedor-f {
+  position: static;
+  width: 100vw; /* Ancho igual al ancho de la ventana del navegador */
+  height: 5vh; /* Altura igual a la altura de la ventana del navegador */
+  background-color: #90d55e; /* Color de fondo del rectángulo */
+  border:0.5rem solid #449c3c;
+  overflow: hidden; /* Evita que el rectángulo se desborde de la ventana */
+  color:#000000;
+  display: flex;
+  text-align:lefts;
+  align-items: center;
+  font-size:1rem;
+  font-family:Saira;
+}
+.pokedex-titulo {
+  width: 15rem; /* Ancho deseado */
+  height: auto; /* Altura automática para mantener la proporción original */
+  position: absolute;
+  top:1rem; /* Coloca el elemento 50 píxeles desde la parte superior del elemento padre */
+  right:40rem;
+}
+.pokedex-imagen {
+  width: 8rem; /* Ancho deseado */
+  height: auto; /* Altura automática para mantener la proporción original */
+  position: absolute;
+  top:1rem; /* Coloca el elemento 50 píxeles desde la parte superior del elemento padre */
+  right:5rem;
+}
+.pokemon-footer {
+  width: 5rem; /* Ancho deseado */
+  height: auto; /* Altura automática para mantener la proporción original */
+  position: absolute;
+  right:5rem;
+}
 #reset-button {
     background-color: #4CAF50;
     color: rgb(255, 255, 255);
