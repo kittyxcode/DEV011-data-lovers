@@ -5,7 +5,7 @@ export const renderItems = (data) => {
   //crear lista de Lis
   const ulElement= document.createElement('ul')
   //Recorrer objeto
-  data.pokemon.forEach((pokemon) => {
+  data.forEach((pokemon) => {
     //crear el elemento Li
     const liElement = document.createElement("li");
     liElement.innerHTML = `
