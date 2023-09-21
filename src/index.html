@@ -17,7 +17,7 @@
       <div class="contenedor-c">
       <section id="filtro">
         <label for="select-sort">Filtrar por: </label>
-        <select name="" id="select-sort" data-testid="select-sort" >
+        <select name="atri-pokemon" id="select-sort" data-testid="select-sort" >
           <option value="num">Todos</option>
           <option value="type">Tipo</option>
           <option value="weight">Peso</option>
@@ -39,19 +39,17 @@
       </section>
       <section id="root">
         <ul id="tarjetas">
-          <li>
-            <dl itemscope itemtype="pokemon">
-              <dt>Nombre:</dt>
-              <dd itemprop="name"></dd>
-              <dt>Número:</dt>
-              <dd itemprop="num"></dd>
-              <dt>Tipo:</dt>
-              <dd itemprop="type"></dd>
-              <dt>Altura:</dt>
-              <dd itemprop="height"></dd>
-              <dt>Peso:</dt>
-              <dd itemprop="weight"></dd>
-            </dl>
+          <li itemscope itemtype="pokemon">
+            <dt>Nombre:</dt>
+            <dd itemprop="name"></dd>
+            <dt>Número:</dt>
+            <dd itemprop="num"></dd>
+            <dt>Tipo:</dt>
+            <dd itemprop="type"></dd>
+            <dt>Altura:</dt>
+            <dd itemprop="height"></dd>
+            <dt>Peso:</dt>
+            <dd itemprop="weight"></dd>
           </li>
         </ul>        
       </section>
