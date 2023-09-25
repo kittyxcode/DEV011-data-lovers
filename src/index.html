@@ -13,52 +13,70 @@
   </head>
   <body>
     <header>
+      
       <img
         src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex-t.png"
-        alt="logo" class="logo"
+        alt="logo"
+        class="logo"
       />
-      <button class="abrir-menu" id="abrir"><img src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex.png" alt="pokedex-i" class="pokedex-imagen"></button>
+      <button class="abrir-menu" id="abrir">
+        <img
+          src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex.png"
+          alt="pokedex-i"
+          class="pokedex-imagen"
+        />
+      </button>
       <nav class="nav" id="nav">
         <button class="cerrar-menu" id="cerrar">cerrar</button>
         <ul class="nav-list">
           <li>
+            <label for="select-sort"></label>
             <select
               name="atri-pokemon"
               id="select-sort"
               data-testid="select-sort"
             >
-            <option value="" disabled selected>Type</option>
+              <option value="" disabled selected>Type</option>
               <option value="Fire">Fire</option>
               <option value="Water">Water</option>
             </select>
           </li>
-          <li><select
-            name="atri-pokemon"
-            id="select-sort"
-            data-testid="select-sort"
-          >
-          <option value="" disabled selected>Number</option>
-            <option value="Mayor">Mayor</option>
-            <option value="Menor">Menor</option>
-          </select></li>
-          <li><select
-            name="atri-pokemon"
-            id="select-sort"
-            data-testid="select-sort"
-          >
-          <option value="" disabled selected>Peso</option>
-            <option value="Fire">menor</option>
-            <option value="Water">mayorr</option>
-          </select></li>
-          <li><select
-            name="atri-pokemon"
-            id="select-sort"
-            data-testid="select-sort"
-          >
-          <option value="" disabled selected>Promedio Altura</option>
-            <option value="Fire">Fire</option>
-            <option value="Water">Water</option>
-          </select></li>
+          <li>
+            <label for="select-sort2"></label>
+            <select
+              name="atri-pokemon"
+              id="select-sort2"
+              data-testid="select-sort2"
+            >
+              <option value="" disabled selected>Number</option>
+              <option value="Mayor">Mayor</option>
+              <option value="Menor">Menor</option>
+            </select>
+          </li>
+          <li>
+            <label for="select-sort3"></label>
+            <select
+              name="atri-pokemon"
+              id="select-sort3"
+              data-testid="select-sort3"
+            >
+              <option value="" disabled selected>Peso</option>
+              <option value="Fire">menor</option>
+              <option value="Water">mayorr</option>
+            </select>
+          </li>
+          <li>
+            <label for="select-sort4"></label>
+            <select
+              name="atri-pokemon"
+              id="select-sort4"
+              data-testid="select-sort4"
+            >
+              <option value="" disabled selected>Promedio Altura</option>
+              <option value="Fire">Fire</option>
+              <option value="Water">Water</option>
+            </select>
+          </li>
           <li>
             <button id="reset-button" data-testid="button-clear" type="button">
               Limpiar filtros
@@ -66,6 +84,7 @@
           </li>
         </ul>
       </nav>
+      <h1></h1>
       <!-- <img src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex.png" alt="pokedex-i" class="pokedex-imagen"> -->
     </header>
     <main>
