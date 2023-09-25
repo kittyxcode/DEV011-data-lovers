@@ -1,9 +1,81 @@
-
-body {
+*{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-.contenedor-t {
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #41b1a5;
+}
+
+.logo{
+  max-width: 10rem;
+}
+
+.nav-list{
+  list-style-type: none;
+  display: flex;
+  gap: 0.1rem;
+  
+}
+
+.nav-list li{
+
+  text-decoration: none;
+  color:#41b1a5;
+}
+
+/*Esta clase debe estar en display none para que no se vea en desktop*/
+.abrir-menu,
+.cerrar-menu{
+  display: none;
+}
+
+
+@media screen and (max-width:650px){
+  .abrir-menu,
+  .cerrar-menu{
+    display: block;
+  }
+
+  .nav{
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #449c3c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0, .5);
+  }
+  nav.visible{
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  .nav-list{
+    flex-direction: column;
+    align-items: end;
+  }
+
+  
+  
+}
+
+
+
+.contenedor-tf {
   position: static;
   width: 100vw; /* Ancho igual al ancho de la ventana del navegador */
   height: 15vh; /* Altura igual a la altura de la ventana del navegador */
@@ -33,7 +105,7 @@ body {
   font-size:1rem;
   font-family:Saira;
 }
-.pokedex-titulo {
+.pokedex-tituloj {
   width: 15rem; /* Ancho deseado */
   height: auto; /* Altura automática para mantener la proporción original */
   position: absolute;
@@ -53,7 +125,7 @@ body {
   position: absolute;
   right:5rem;
 }
-#reset-button {
+/* #reset-button {
     background-color: #90d55e;
     color: rgb(255, 255, 255);
     border: 1px solid #449c3c;
@@ -68,5 +140,5 @@ body {
   #reset-button:hover {
     background-color: #7ad8cd;
     border: 1px solid #41b1a5;
-  }
+  } */
 
