@@ -44,6 +44,19 @@ header{
   display: none;
 }
 
+.tarjetas{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tarjetas li{
+  margin: 5px; /* Espacio entre los elementos */
+  padding: 10px; /* Espacio dentro de cada elemento */
+  border: 1px solid #ccc; /* Borde opcional para resaltar cada elemento */
+}
+
+
+
 
 @media screen and (max-width:650px){
   .abrir-menu,
