@@ -52,8 +52,8 @@ header{
 }
 .tarjetas li{
   margin: 5px; /* Espacio entre los elementos */
-  padding: 10px; /* Espacio dentro de cada elemento */
-  border: 1px solid #ccc; /* Borde opcional para resaltar cada elemento */
+ 
+  /* Borde opcional para resaltar cada elemento */
 }
 
 .tarjetas li div{
@@ -61,17 +61,23 @@ header{
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  height: 15rem; /* Ajusta la altura según tus necesidades */
+  height: 10rem; /* Ajusta la altura según tus necesidades */
 }
 .card-side.back {
   transform: rotateY(-180deg);
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%,#C850C0 46%, #FFCC70 100%);
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/374756/pkmngo-pokeballclosed.png');
+  background-size: cover;
+
+
+  /* background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%,#C850C0 46%, #FFCC70 100%); */
 }
 .card-side.front {
-  
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/374756/pkmngo-pokeball.png');
+  background-size: cover; 
+
+  /* background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
 }
 
 .card:hover .card-side.front {
@@ -91,9 +97,8 @@ header{
   background: none;
 }
 .card-side {
-  
   height: 10rem;
-  border-radius: 15px;
+  border-radius: 50%;/*para que quede redondo 50%*/
   transition: all 0.8s ease;
   backface-visibility: hidden;
   position: absolute;
@@ -136,9 +141,6 @@ header{
     align-items: end;
   } 
 }
-
-
-
 .contenedor-tf {
   position: static;
   width: 100vw; /* Ancho igual al ancho de la ventana del navegador */
