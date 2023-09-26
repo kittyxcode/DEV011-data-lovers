@@ -1,63 +1,117 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
     <title>Data Lovers</title>
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAExMUAAgICAAACP8A9/f3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAIkQiAAAAAAJEREQgAAAAJEREREIAAAJERERERCAAAkREREREIAAkREQiRERCACIiIkQiIiIAIzMzETMzMgACMzMzMzMgAAIzMzMzMyAAACMzMzMyAAAAAjMzMyAAAAAAIjMiAAAAAAAAIgAAAAAAAAAAAAAAD+fwAA+B8AAPAPAADgBwAAwAMAAMADAACAAQAAgAEAAIABAADAAwAAwAMAAOAHAADwDwAA+B8AAP5/AAD//wAA"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="contenedor-t">
-      <header>
-          <img src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex-t.png" alt="pokedex-t" class="pokedex-titulo">  
-          <img src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex.png" alt="pokedex-i" class="pokedex-imagen">
+    <header>
+      <img
+        src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex-t.png"
+        alt="logo"
+        class="logo"
+      />
+      <button class="abrir-menu" id="abrir">
+        <img
+          src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokedex.png"
+          alt="pokedex-i"
+          class="pokedex-imagen"
+        />
+      </button>
+      <nav class="nav" id="nav">
+        <button class="cerrar-menu" id="cerrar">cerrar</button>
+        <ul class="nav-list">
+          <li>
+            <label for="select-sort"></label>
+            <select
+              name="atri-pokemon"
+              id="select-sort"
+              data-testid="select-sort"
+            >
+              <option value="" disabled selected>Type</option>
+              <option value="Fire">Fire</option>
+              <option value="Water">Water</option>
+            </select>
+          </li>
+          <li>
+            <label for="select-sort2"></label>
+            <select
+              name="atri-pokemon"
+              id="select-sort2"
+              data-testid="select-sort2"
+            >
+              <option value="" disabled selected>Number</option>
+              <option value="Mayor">Mayor</option>
+              <option value="Menor">Menor</option>
+            </select>
+          </li>
+          <li>
+            <label for="select-sort3"></label>
+            <select
+              name="atri-pokemon"
+              id="select-sort3"
+              data-testid="select-sort3"
+            >
+              <option value="" disabled selected>Peso</option>
+              <option value="Fire">menor</option>
+              <option value="Water">mayorr</option>
+            </select>
+          </li>
+          <li>
+            <label for="select-sort4"></label>
+            <select
+              name="atri-pokemon"
+              id="select-sort4"
+              data-testid="select-sort4"
+            >
+              <option value="" disabled selected>Promedio Altura</option>
+              <option value="Fire">Fire</option>
+              <option value="Water">Water</option>
+            </select>
+          </li>
+          <li>
+            <button id="reset-button" data-testid="button-clear" type="button">
+              Limpiar filtros
+            </button>
+          </li>
+        </ul>
+      </nav>
       <h1></h1>
-      </header>
-    </div>
+    </header>
     <main>
       <div class="contenedor-c">
-      <section id="filtro">
-        <label for="select-sort">Filtrar por: </label>
-        <select name="atri-pokemon" id="select-sort" data-testid="select-sort" >
-          <option value="num">Todos</option>
-          <option value="type">Tipo</option>
-          <option value="weight">Peso</option>
-          <option value="height">Altura</option>
-        </select>
-        <label for="" filterby>Descendente</label>
-        <input type="radio" name="sort-order" value="desc" checked/>
-        
-        <label for="" filterby>Ascendente</label>
-        <input type="radio" name="sort-order" value="asc" />
-
-        <textarea name="" id="textarea" cols="30" rows="1"></textarea>
-        
-        <button id="buttonSearch">Buscar</button>
-        
-        <button id="reset-button" data-testid="button-clear" type="button">
-          Limpiar filtros
-        </button>
-      </section>
-      <section id="root">
-        <ul id="tarjetas">
-          <li itemscope itemtype="pokemon">
-            <dt>Nombre:</dt>
-            <dd itemprop="name"></dd>
-            <dt>Número:</dt>
-            <dd itemprop="num"></dd>
-            <dt>Tipo:</dt>
-            <dd itemprop="type"></dd>
-            <dt>Altura:</dt>
-            <dd itemprop="height"></dd>
-            <dt>Peso:</dt>
-            <dd itemprop="weight"></dd>
-          </li>
-        </ul>        
-      </section>
+        <section id="root">
+          <ul class="tarjetas">
+            <li itemscope itemtype="pokemon">
+              <dt>Nombre:</dt>
+              <dd itemprop="name"></dd>
+              <dt>Número:</dt>
+              <dd itemprop="num"></dd>
+              <dt>Tipo:</dt>
+              <dd itemprop="type"></dd>
+              <dt>Altura:</dt>
+              <dd itemprop="height"></dd>
+              <dt>Peso:</dt>
+              <dd itemprop="weight"></dd>
+            </li>
+          </ul>
+        </section>
       </div>
     </main>
     <footer class="contenedor-f">
       <p>By: Katherine Pino &amp; Isadora Vargas</p>
-       <img src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/612ce4761b9679000402af1c.png" alt="pokemon-logo" class="pokemon-footer">
+      <img
+        src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/612ce4761b9679000402af1c.png"
+        alt="pokemon-logo"
+        class="pokemon-footer"
+      />
     </footer>
     <script src="main.js" type="module"></script>
   </body>

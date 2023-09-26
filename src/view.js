@@ -24,13 +24,7 @@ export const renderItems = (data) => {
     </dl>
     `;
     ulElement.appendChild(liElement);
-
-
-    //console.log(`Número: ${pokemon.num}`);
-    //console.log(`Nombre: ${pokemon.name}`);
-    //console.log(`Generación: ${pokemon.generation.name}`);
-    // Puedes imprimir más propiedades aquí según tus necesidades
   });
-  //console.log(liElements[0].name);
+  ulElement.classList.add("tarjetas");
   return ulElement;
 };
