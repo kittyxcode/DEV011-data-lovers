@@ -15,7 +15,7 @@ cerrar.addEventListener("click", () => {
   nav.classList.remove("visible");
 });
 
-const ulElement = document.querySelector("#tarjetas");
+const ulElement = document.querySelector(".tarjetas");
 
 const prueba = renderItems(data.pokemon);
 console.log(prueba);
