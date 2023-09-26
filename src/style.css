@@ -49,9 +49,12 @@ header{
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
 }
 .tarjetas li{
-  margin: 5px; /* Espacio entre los elementos */
+  margin: 0.5rem; /* Espacio entre los elementos */
+  
  
   /* Borde opcional para resaltar cada elemento */
 }
