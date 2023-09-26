@@ -8,7 +8,17 @@ export const renderItems = (data) => {
   data.forEach((pokemon) => {
     //crear el elemento Li
     const liElement = document.createElement("li");
-    liElement.innerHTML = `
+    liElement.innerHTML = 
+    `<div class="card">
+        <div class="card-side front">
+          <div><img src="${pokemon.img}" alt="${pokemon.name}"></div>
+        </div>
+        <div class="card-side back">
+          <div>Back Side</div>
+        </div>
+    </div>`
+    
+    /* `
     <img src="${pokemon.img}" alt="${pokemon.name}">
     <dl itemscope itemtype="pokemon">
       <dt>Nombre:</dt>
@@ -22,7 +32,7 @@ export const renderItems = (data) => {
       <dt>Peso:</dt>
       <dd itemprop="weight">${pokemon.size.weight}</dd>
     </dl>
-    `;
+    `; */
     ulElement.appendChild(liElement);
   });
   ulElement.classList.add("tarjetas");
