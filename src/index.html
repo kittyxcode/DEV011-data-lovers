@@ -16,22 +16,40 @@
     <main>
       <div class="contenedor-c">
       <section id="filtro">
-        <label for="select-sort">Filtrar por: </label>
-        <select name="atri-pokemon" id="select-sort" data-testid="select-sort" >
-          <option value="num">Todos</option>
-          <option value="type">Tipo</option>
-          <option value="weight">Peso</option>
-          <option value="height">Altura</option>
+        <label for="select-sort">Tipo: </label>
+        <select name="atri-pokemon" id="filter-by" data-testid="filter-by" >
+          <option value="all">Todos</option>
+          <option value="normal">Normal</option>
+          <option value="fire">Fuego</option>
+          <option value="water">Agua</option>
+          <option value="grass">Planta</option>
+          <option value="electric">Eléctrico</option>
+          <option value="ice">Hielo</option>
+          <option value="fighting">Lucha</option>
+          <option value="poison">Veneno</option>
+          <option value="ground">Tierra</option>
+          <option value="flying">Volador</option>
+          <option value="psychic">Psíquico</option>
+          <option value="bug">Bicho</option>
+          <option value="rock">Roca</option>
+          <option value="ghost">Fantasma</option>
+          <option value="dark">Siniestro</option>
+          <option value="dragon">Dragón</option>
+          <option value="steel">Metal</option>
+          <option value="fairy">Hada</option>
         </select>
-        <label for="" filterby>Descendente</label>
-        <input type="radio" name="sort-order" value="desc" checked/>
+
+        <label for="asc" sort>A-Z</label>
+        <input type="radio" id="asc" name="order" value="asc" checked/>
         
-        <label for="" filterby>Ascendente</label>
-        <input type="radio" name="sort-order" value="asc" />
+        <label for="desc" sort>Z-A</label>
+        <input type="radio" id="desc" name="order" value="desc" />
+        <ul id="order-result"></ul>
+        <!--<button id="botonOrdenar">Ordenar Alfabéticamente</button>
 
         <textarea name="" id="textarea" cols="30" rows="1"></textarea>
         
-        <button id="buttonSearch">Buscar</button>
+        <button id="buttonSearch">Buscar</button>-->
         
         <button id="reset-button" data-testid="button-clear" type="button">
           Limpiar filtros

@@ -2,8 +2,11 @@
 //aca disenamos la tarjeta
 
 export const renderItems = (data) => {
+  console.log(renderItems)
   //crear lista de Lis
-  const ulElement= document.createElement('ul')
+  const ulElement= document.createElement('ul');
+  ulElement.setAttribute("id", "tarjetas");
+  console.log(ulElement)
   //Recorrer objeto
   data.forEach((pokemon) => {
     //crear el elemento Li
