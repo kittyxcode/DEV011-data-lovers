@@ -1,4 +1,5 @@
 import { renderItems } from "./view.js";
+import { filterData } from "./dataFunctions.js";
 //import { allPokemonChargeScreen } from "./dataFunctions.js";
 
 //toda la data
@@ -27,11 +28,11 @@ ulElement.replaceWith(prueba);
 
 const buttonSearch = document.getElementById("buttonSearch");
 const filtro = document.getElementById("filter-by");
+
+
 filtro.addEventListener("change", (event) => {
   const tipoPokemon = event.target.value;
-  const pokemonsFiltrados = data.pokemon.filter((pokemon) =>
-    pokemon.type.includes(tipoPokemon)
-  );
+  const pokemonsFiltrados = filterData(data.pokemon, tipoPokemon);
   const ulElement = document.querySelector("#tarjetas");
   const prueba = renderItems(pokemonsFiltrados);
   ulElement.replaceWith(prueba);
