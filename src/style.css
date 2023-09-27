@@ -1,9 +1,148 @@
-
-body {
+*{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-.contenedor-t {
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #41b1a5;
+}
+
+.logo{
+  max-width: 8rem;
+}
+
+.pokedex-imagen {
+  width: 8rem; /* Ancho deseado */
+  height: auto; /* Altura automática para mantener la proporción original */
+  position: absolute;
+  top:1rem; /* Coloca el elemento 50 píxeles desde la parte superior del elemento padre */
+  right:5rem;
+}
+
+.nav-list{
+  list-style-type: none;
+  display: flex;
+  gap: 0.1rem;
+  
+}
+
+.nav-list li{
+  text-decoration: none;
+  color:#41b1a5;
+}
+
+/*Esta clase debe estar en display none para que no se vea en desktop*/
+.abrir-menu,
+.cerrar-menu{
+  display: none;
+}
+
+.tarjetas{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+.tarjetas li{
+  margin: 0.5rem; /* Espacio entre los elementos */
+  
+ 
+  /* Borde opcional para resaltar cada elemento */
+}
+
+.tarjetas li div{
+
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 10rem; /* Ajusta la altura según tus necesidades */
+}
+.card-side.back {
+  transform: rotateY(-180deg);
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/374756/pkmngo-pokeballclosed.png');
+  background-size: cover;
+
+
+  /* background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%,#C850C0 46%, #FFCC70 100%); */
+}
+.card-side.front {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/374756/pkmngo-pokeball.png');
+  background-size: cover; 
+
+  /* background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+}
+
+.card:hover .card-side.front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
+}
+.card {
+  perspective: 150rem;
+  margin: 1rem auto;
+  height: 5rem;
+  width: 10rem;
+  max-width: 400px;
+  box-shadow: none;
+  background: none;
+}
+.card-side {
+  height: 10rem;
+  border-radius: 50%;/*para que quede redondo 50%*/
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color: 
+rgb(37,80,0);
+}
+
+@media screen and (max-width:650px){
+  .abrir-menu,
+  .cerrar-menu{
+    display: block;
+  }
+
+  .nav{
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #449c3c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0, .5);
+  }
+  nav.visible{
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-list{
+    flex-direction: column;
+    align-items: end;
+  } 
+}
+.contenedor-tf {
   position: static;
   width: 100vw; /* Ancho igual al ancho de la ventana del navegador */
   height: 15vh; /* Altura igual a la altura de la ventana del navegador */
@@ -33,27 +172,21 @@ body {
   font-size:1rem;
   font-family:Saira;
 }
-.pokedex-titulo {
+.pokedex-tituloj {
   width: 15rem; /* Ancho deseado */
   height: auto; /* Altura automática para mantener la proporción original */
   position: absolute;
   top:1rem; /* Coloca el elemento 50 píxeles desde la parte superior del elemento padre */
   right:40rem;
 }
-.pokedex-imagen {
-  width: 8rem; /* Ancho deseado */
-  height: auto; /* Altura automática para mantener la proporción original */
-  position: absolute;
-  top:1rem; /* Coloca el elemento 50 píxeles desde la parte superior del elemento padre */
-  right:5rem;
-}
+
 .pokemon-footer {
   width: 5rem; /* Ancho deseado */
   height: auto; /* Altura automática para mantener la proporción original */
   position: absolute;
   right:5rem;
 }
-#reset-button {
+/* #reset-button {
     background-color: #90d55e;
     color: rgb(255, 255, 255);
     border: 1px solid #449c3c;
@@ -68,5 +201,5 @@ body {
   #reset-button:hover {
     background-color: #7ad8cd;
     border: 1px solid #41b1a5;
-  }
+  } */
 

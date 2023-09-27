@@ -11,7 +11,30 @@ export const renderItems = (data) => {
   data.forEach((pokemon) => {
     //crear el elemento Li
     const liElement = document.createElement("li");
-    liElement.innerHTML = `
+    liElement.innerHTML = 
+    `<div class="card">
+        <div class="card-side front">
+          <div><img src="${pokemon.img}" alt="${pokemon.name}"></div>
+        </div>
+        <div class="card-side back">
+          <div>
+          <dl itemscope itemtype="pokemon">
+          <dt>Nombre:</dt>
+          <dd itemprop="name">${pokemon.name}</dd>
+          <dt>Número:</dt>
+          <dd itemprop="num">${pokemon.num}</dd>
+          <dt>Tipo:</dt>
+          <dd itemprop="type">${pokemon.type}</dd>
+          <dt>Altura:</dt>
+          <dd itemprop="height">${pokemon.size.height}</dd>
+          <dt>Peso:</dt>
+          <dd itemprop="weight">${pokemon.size.weight}</dd>
+        </dl>
+          </div>
+        </div>
+    </div>`
+    
+    /* `
     <img src="${pokemon.img}" alt="${pokemon.name}">
     <dl itemscope itemtype="pokemon">
       <dt>Nombre:</dt>
@@ -25,15 +48,9 @@ export const renderItems = (data) => {
       <dt>Peso:</dt>
       <dd itemprop="weight">${pokemon.size.weight}</dd>
     </dl>
-    `;
+    `; */
     ulElement.appendChild(liElement);
-
-
-    //console.log(`Número: ${pokemon.num}`);
-    //console.log(`Nombre: ${pokemon.name}`);
-    //console.log(`Generación: ${pokemon.generation.name}`);
-    // Puedes imprimir más propiedades aquí según tus necesidades
   });
-  //console.log(liElements[0].name);
+  ulElement.classList.add("tarjetas");
   return ulElement;
 };
