@@ -14,7 +14,20 @@ export const renderItems = (data) => {
           <div><img src="${pokemon.img}" alt="${pokemon.name}"></div>
         </div>
         <div class="card-side back">
-          <div>Back Side</div>
+          <div>
+          <dl itemscope itemtype="pokemon">
+          <dt>Nombre:</dt>
+          <dd itemprop="name">${pokemon.name}</dd>
+          <dt>Número:</dt>
+          <dd itemprop="num">${pokemon.num}</dd>
+          <dt>Tipo:</dt>
+          <dd itemprop="type">${pokemon.type}</dd>
+          <dt>Altura:</dt>
+          <dd itemprop="height">${pokemon.size.height}</dd>
+          <dt>Peso:</dt>
+          <dd itemprop="weight">${pokemon.size.weight}</dd>
+        </dl>
+          </div>
         </div>
     </div>`
     

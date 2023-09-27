@@ -33,8 +33,6 @@ header{
 }
 
 .nav-list li{
-  
-
   text-decoration: none;
   color:#41b1a5;
 }
@@ -92,7 +90,7 @@ header{
 }
 .card {
   perspective: 150rem;
-  margin: 2em auto;
+  margin: 1rem auto;
   height: 5rem;
   width: 10rem;
   max-width: 400px;
@@ -109,10 +107,9 @@ header{
   left: 0;
   width: 100%;
   padding: 2rem;
-  color: white;
+  color: 
+rgb(37,80,0);
 }
-
-
 
 @media screen and (max-width:650px){
   .abrir-menu,
@@ -121,6 +118,7 @@ header{
   }
 
   .nav{
+    z-index: 999;
     opacity: 0;
     visibility: hidden;
     display: flex;
