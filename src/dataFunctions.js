@@ -2,7 +2,6 @@
 
 //Creo que seria buena idea encapsular toda la llamada de fetch
 
-
 //obtenemos la ruta del archivo JSON
 //const rutaArchivoJSON = "../data/pokemon/pokemon.json";
 //console.log(rutaArchivoJSON);
@@ -55,3 +54,10 @@ export const filterData = (data, filterBy, value) => {
   
 
 }; */
+export const filterData = (data, type) => {
+  return data.filter((pokemon) =>
+    pokemon.type.includes(type)
+  );
+};
+
+//otra fuction 
