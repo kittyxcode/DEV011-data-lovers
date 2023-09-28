@@ -10,6 +10,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -26,11 +29,12 @@
         />
       </button>
       <nav class="nav" id="nav">
-        <button class="cerrar-menu" id="cerrar">cerrar</button>
+        <button class="cerrar-menu" id="cerrar">Cerrar</button>
         <ul class="nav-list">
           <li>
             <label for="filter-by"></label>
             <select name="atri-pokemon" id="filter-by" data-testid="filter-by">
+              <option value="" disabled selected>Tipo</option>
               <option value="all">Todos</option>
               <option value="normal">Normal</option>
               <option value="fire">Fuego</option>
@@ -57,11 +61,10 @@
             <select
               name="atri-pokemon"
               id="select-sort2"
-              data-testid="select-sort2"
-            >
-              <option value="" disabled selected>Number</option>
-              <option value="Mayor">Mayor</option>
-              <option value="Menor">Menor</option>
+              data-testid="select-sort2">
+              <option value="" disabled selected>Orden Alfabetico</option>
+              <option value="name">A-Z</option>
+              <option value="name">Z-A</option>
             </select>
           </li>
           <li>
@@ -69,11 +72,10 @@
             <select
               name="atri-pokemon"
               id="select-sort3"
-              data-testid="select-sort3"
-            >
-              <option value="" disabled selected>Peso</option>
-              <option value="Fire">menor</option>
-              <option value="Water">mayorr</option>
+              data-testid="select-sort3">
+              <option value="" disabled selected>Número</option>
+              <option value="num">Mayor-Menor</option>
+              <option value="num">Menor-Mayor</option>
             </select>
           </li>
           <li>
@@ -81,16 +83,20 @@
             <select
               name="atri-pokemon"
               id="select-sort4"
-              data-testid="select-sort4"
-            >
-              <option value="" disabled selected>Promedio Altura</option>
-              <option value="Fire">Fire</option>
-              <option value="Water">Water</option>
+              data-testid="select-sort4">
+              <option value="" disabled selected>Ataque básico</option>
+              <option value="base-attack">Mayor-Menor</option>
+              <option value="base-attack">Menor-Mayor</option>
             </select>
           </li>
           <li>
+            <button id="calculo-stats" data-testid="button-stats" type="button">
+              Ataque Máximo
+            </button>
+          </li>
+          <li>
             <button id="reset-button" data-testid="button-clear" type="button">
-              Limpiar filtros
+              Limpiar
             </button>
           </li>
         </ul>
@@ -98,24 +104,7 @@
       <h1></h1>
     </header>
     <main>
-      <div class="contenedor-c">
-        OrdenarAlfabeticamente
-        <section id="filtro">
-          <label for="asc" sort>A-Z</label>
-          <input type="radio" id="asc" name="order" value="asc" checked />
-
-          <label for="desc" sort>Z-A</label>
-          <input type="radio" id="desc" name="order" value="desc" />
-          <ul id="order-result"></ul>
-          <!--<button id="botonOrdenar">Ordenar Alfabéticamente</button>
-
-        <textarea name="" id="textarea" cols="30" rows="1"></textarea>
-        
-        <button id="buttonSearch">Buscar</button>-->
-
-          
-          
-        </section>
+      <div class="contenedor-c">   
         <section id="root">
           <ul id="tarjetas">
             <li itemscope itemtype="pokemon">
@@ -135,7 +124,7 @@
       </div>
     </main>
     <footer class="contenedor-f">
-      <p>By: Katherine Pino &amp; Isadora Vargas</p>
+      By: Katherine Pino &amp; Isadora Vargas
       <img
         src="https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/612ce4761b9679000402af1c.png"
         alt="pokemon-logo"
