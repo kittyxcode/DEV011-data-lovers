@@ -58,6 +58,9 @@ export const filterData = (data, filterBy, value) => {
 
 
 export const filterData = (data, type) => {
+  if(type==="all"){
+    return data;
+  }
   return data.filter((pokemon) =>
     pokemon.type.includes(type)
   );
