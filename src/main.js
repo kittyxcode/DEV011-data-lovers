@@ -1,5 +1,6 @@
 import { renderItems } from "./view.js";
-import { filterData } from "./dataFunctions.js";
+import { filterData, computeStats } from "./dataFunctions.js";
+
 //import { allPokemonChargeScreen } from "./dataFunctions.js";
 
 //toda la data
@@ -8,6 +9,7 @@ import data from "./data/pokemon/pokemon.js";
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
+let pokemones = data.pokemon;
 
 abrir.addEventListener("click", () => {
   nav.classList.add("visible");
@@ -18,25 +20,29 @@ cerrar.addEventListener("click", () => {
 
 const ulElement = document.querySelector("#tarjetas");
 
-const prueba = renderItems(data.pokemon);
+const prueba = renderItems(pokemones);
 console.log(prueba);
 
 
 ulElement.replaceWith(prueba);
 
 
-
-const buttonSearch = document.getElementById("buttonSearch");
 const filtro = document.getElementById("filter-by");
 
 
 filtro.addEventListener("change", (event) => {
   const tipoPokemon = event.target.value;
-  const pokemonsFiltrados = filterData(data.pokemon, tipoPokemon);
+  pokemones = filterData(data.pokemon, tipoPokemon);
   const ulElement = document.querySelector("#tarjetas");
-  const prueba = renderItems(pokemonsFiltrados);
+  const prueba = renderItems(pokemones);
   ulElement.replaceWith(prueba);
+  const totalPokemones = computeStats(pokemones);
+  console.log(totalPokemones);
+  const totalPokemonesNum = document.getElementById("count-pokemon");
+  totalPokemonesNum.textContent = `Pokemones: ${totalPokemones}`;
+ 
 });
+
 
 //function LoadAllPokemons(){}
 
@@ -50,4 +56,7 @@ filtro.addEventListener("change", (event) => {
 //const buttonSearch = document.getElementById("buttonSearch");
 
 //Manejo de Eventos
-buttonSearch.addEventListener("click", () => {});
+
+
+
+

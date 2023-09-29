@@ -54,10 +54,17 @@ export const filterData = (data, filterBy, value) => {
   
 
 }; */
+
+
+
 export const filterData = (data, type) => {
   return data.filter((pokemon) =>
     pokemon.type.includes(type)
   );
 };
 
-
+export const computeStats = (pokemones) =>{
+  return pokemones.reduce((cont) => {
+    return cont + 1;
+  }, 0);
+}
