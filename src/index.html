@@ -10,9 +10,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -34,7 +37,7 @@
           <li>
             <label for="filter-by"></label>
             <select name="atri-pokemon" id="filter-by" data-testid="filter-by">
-              <option value="" disabled selected>Tipo</option>
+              <option value="" disabled selected>Tipo:</option>
               <option value="all">Todos</option>
               <option value="normal">Normal</option>
               <option value="fire">Fuego</option>
@@ -61,35 +64,30 @@
             <select
               name="atri-pokemon"
               id="select-sort2"
-              data-testid="select-sort2">
-              <option value="" disabled selected>Orden Alfabetico</option>
-              <option value="name">A-Z</option>
-              <option value="name">Z-A</option>
+              data-testid="select-sort2"
+            >
+              <option value="" disabled selected>Ordenar por: </option>
+              <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
+              <option value="asc">Nro asc</option>
+              <option value="desc">Nro desc</option>
             </select>
           </li>
-          <li>
-            <label for="select-sort3"></label>
-            <select
-              name="atri-pokemon"
-              id="select-sort3"
-              data-testid="select-sort3">
-              <option value="" disabled selected>Número</option>
-              <option value="num">Mayor-Menor</option>
-              <option value="num">Menor-Mayor</option>
-            </select>
-          </li>
+
           <li>
             <button id="reset-button" data-testid="button-clear" type="button">
               Limpiar
             </button>
           </li>
-          <li id="count-pokemon" class="caja" data-testid="count-pokemon">Pokemones: 251</li>
+          <li id="count-pokemon" class="caja" data-testid="count-pokemon">
+            Pokemones: 251
+          </li>
         </ul>
       </nav>
       <h1></h1>
     </header>
     <main>
-      <div class="contenedor-c">   
+      <div class="contenedor-c">
         <section id="root">
           <ul id="tarjetas">
             <li itemscope itemtype="pokemon">
