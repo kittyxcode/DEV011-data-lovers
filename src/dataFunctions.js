@@ -55,19 +55,28 @@ export const filterData = (data, filterBy, value) => {
 
 }; */
 
-
-
 export const filterData = (data, type) => {
-  if(type==="all"){
+  if (type === "all") {
     return data;
   }
-  return data.filter((pokemon) =>
-    pokemon.type.includes(type)
-  );
+  return data.filter((pokemon) => pokemon.type.includes(type));
 };
 
-export const computeStats = (pokemones) =>{
+export const ordenBy = (data, ordenBy) => {
+  if (ordenBy === "asc") {
+    data.sort(function (a, b) {
+      return parseInt(a.num) - parseInt(b.num); // Orden ascendente
+    });
+  }
+  if (ordenBy === "desc") {
+    data.sort(function (a, b) {
+      return parseInt(b.num) - parseInt(a.num); // Orden descendente
+    });
+  }
+};
+
+export const computeStats = (pokemones) => {
   return pokemones.reduce((cont) => {
     return cont + 1;
   }, 0);
-}
+};

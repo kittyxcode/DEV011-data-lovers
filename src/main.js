@@ -1,5 +1,6 @@
 import { renderItems } from "./view.js";
 import { filterData, computeStats } from "./dataFunctions.js";
+import { ordenBy } from "./dataFunctions.js";
 
 //import { allPokemonChargeScreen } from "./dataFunctions.js";
 
