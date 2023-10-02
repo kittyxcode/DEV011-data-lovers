@@ -17,7 +17,6 @@ const ulElement = document.querySelector("#tarjetas");
 const filtro = document.getElementById("filter-by");
 const totalPokemonesNum = document.getElementById("count-pokemon");
 
-
 //update ul element...render
 ulElement.replaceWith(renderPokemons);
 
@@ -55,13 +54,11 @@ ordenByController.addEventListener("change",()=>{
 
 const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", () => {
+  filtro.value = "default";
+  ordenByController.value="default";
   pokemones = data.pokemon;
-  const ulElement = document.querySelector("#tarjetas");
   ulElement.replaceWith(renderPokemons);
   const totalPokemones = computeStats(pokemones);
   const totalPokemonesNum = document.getElementById("count-pokemon");
-  totalPokemonesNum.textContent = `Pokemones: ${totalPokemones}`;
-  const filtroDefault = document.getElementById("filter-by");
-  filtroDefault.value = "default";
+  totalPokemonesNum.replaceWith(renderTotalNumberOfPokemons(totalPokemones));
 });
-

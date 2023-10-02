@@ -6,7 +6,7 @@ export const filterData = (data, type) => {
 };
 
 export const ordenBy = (data, ordenBy) => {
-  if (ordenBy === "asc") {
+  if (ordenBy === "asc" || ordenBy==="default") {
     data.sort(function (a, b) {
       return parseInt(a.num) - parseInt(b.num); // Orden ascendente
     });
