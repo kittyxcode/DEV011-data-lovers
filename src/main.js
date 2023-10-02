@@ -12,10 +12,9 @@ const renderPokemons = renderItems(pokemones);
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
-const ordenByController= document.querySelector("#select-sort");
+const ordenByController = document.querySelector("#select-sort");
 const ulElement = document.querySelector("#tarjetas");
 const filtro = document.getElementById("filter-by");
-const totalPokemonesNum = document.getElementById("count-pokemon");
 
 //update ul element...render
 ulElement.replaceWith(renderPokemons);
@@ -40,7 +39,7 @@ filtro.addEventListener("change", () => {
   totalPokemonesNum.replaceWith(renderTotalNumberOfPokemons(totalPokemones));
 });
 
-ordenByController.addEventListener("change",()=>{
+ordenByController.addEventListener("change", () => {
   const tipoPokemon = filtro.value;
   pokemones = filterData(data.pokemon, tipoPokemon);
   ordenBy(pokemones, ordenByController.value);
@@ -50,12 +49,12 @@ ordenByController.addEventListener("change",()=>{
   const totalPokemones = computeStats(pokemones);
   const totalPokemonesNum = document.getElementById("count-pokemon");
   totalPokemonesNum.replaceWith(renderTotalNumberOfPokemons(totalPokemones));
-})
+});
 
 const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", () => {
   filtro.value = "default";
-  ordenByController.value="default";
+  ordenByController.value = "default";
   pokemones = data.pokemon;
   ulElement.replaceWith(renderPokemons);
   const totalPokemones = computeStats(pokemones);
