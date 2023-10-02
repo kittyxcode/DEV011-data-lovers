@@ -56,7 +56,7 @@ export const filterData = (data, filterBy, value) => {
 }; */
 
 export const filterData = (data, type) => {
-  if (type === "all") {
+  if (type === "all" || type ==="default") {
     return data;
   }
   return data.filter((pokemon) => pokemon.type.includes(type));
@@ -71,6 +71,16 @@ export const ordenBy = (data, ordenBy) => {
   if (ordenBy === "desc") {
     data.sort(function (a, b) {
       return parseInt(b.num) - parseInt(a.num); // Orden descendente
+    });
+  }
+  if (ordenBy === "A-Z") {
+    data.sort(function (a, b) {
+      return a.name.localeCompare(b.name); // Orden ascendente
+    });
+  }
+  if (ordenBy === "Z-A") {
+    data.sort(function (a, b) {
+      return b.name.localeCompare(a.name); // Orden descendente
     });
   }
 };

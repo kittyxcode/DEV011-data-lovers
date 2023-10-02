@@ -1,21 +1,25 @@
 import { renderItems } from "./view.js";
 import { filterData, computeStats } from "./dataFunctions.js";
 import { ordenBy } from "./dataFunctions.js";
-
-//import { allPokemonChargeScreen } from "./dataFunctions.js";
-
-//toda la data
 import data from "./data/pokemon/pokemon.js";
+
+//data que usaremos
+let pokemones = data.pokemon;
+const renderPokemons = renderItems(pokemones);
+
 //capturar elemento dom
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
 const ordenByController= document.querySelector("#select-sort");
+const ulElement = document.querySelector("#tarjetas");
+const filtro = document.getElementById("filter-by");
 
 
+//update ul element...render
+ulElement.replaceWith(renderPokemons);
 
-let pokemones = data.pokemon;
-
+//Eventos para menu hamburguesa
 abrir.addEventListener("click", () => {
   nav.classList.add("visible");
 });
@@ -23,25 +27,29 @@ cerrar.addEventListener("click", () => {
   nav.classList.remove("visible");
 });
 
-const ulElement = document.querySelector("#tarjetas");
-
-const prueba = renderItems(pokemones);
-console.log(prueba);
-
-
-ulElement.replaceWith(prueba);
-
-
-const filtro = document.getElementById("filter-by");
-const btnOrden= document.getElementById("elect-sort");
+filtro.addEventListener("change", () => {
+  const tipoPokemon = filtro.value;
+  pokemones = filterData(data.pokemon, tipoPokemon);
+  ordenBy(pokemones, ordenByController.value);
+  const ulElement = document.querySelector("#tarjetas");
+  const renderPokemons = renderItems(pokemones);
+  ulElement.replaceWith(renderPokemons);
 
 
-filtro.addEventListener("change", (event) => {
-  const tipoPokemon = event.target.value;
+
+  
+  const totalPokemones = computeStats(pokemones);
+  const totalPokemonesNum = document.getElementById("count-pokemon");
+  totalPokemonesNum.textContent = `Pokemones: ${totalPokemones}`;
+ 
+});
+
+ordenByController.addEventListener("change",()=>{
+  const tipoPokemon = filtro.value;
   pokemones = filterData(data.pokemon, tipoPokemon);
 
-  const pokemonOrdenados= ordenBy(pokemones, ordenByController.value);
-  console.log(ordenByController.value);
+  ordenBy(pokemones, ordenByController.value);
+  
 
 
   const ulElement = document.querySelector("#tarjetas");
@@ -51,35 +59,17 @@ filtro.addEventListener("change", (event) => {
   console.log(totalPokemones);
   const totalPokemonesNum = document.getElementById("count-pokemon");
   totalPokemonesNum.textContent = `Pokemones: ${totalPokemones}`;
- 
-});
+})
+
 
 const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", () => {
   pokemones = data.pokemon;
   const ulElement = document.querySelector("#tarjetas");
-  ulElement.replaceWith(prueba);
+  ulElement.replaceWith(renderPokemons);
   const totalPokemones = computeStats(pokemones);
   const totalPokemonesNum = document.getElementById("count-pokemon");
   totalPokemonesNum.textContent = `Pokemones: ${totalPokemones}`;
   const filtroDefault = document.getElementById("filter-by");
   filtroDefault.value = "default";
 });
-
-
-//function LoadAllPokemons(){}
-
-//renderItems(data);
-
-//Manipulacion DOM
-
-//const selectControll = document.getElementById("select-sort");
-//const radioButtons = document.querySelectorAll('input[name="sort-order"]');
-//const textarea = document.getElementById("textarea");
-//const buttonSearch = document.getElementById("buttonSearch");
-
-//Manejo de Eventos
-
-
-
-

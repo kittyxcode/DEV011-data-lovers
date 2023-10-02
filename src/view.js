@@ -38,3 +38,8 @@ export const renderItems = (data) => {
   ulElement.classList.add("tarjetas");
   return ulElement;
 };
+
+export const renderTotalNumberOfPokemons{
+
+  
+}
