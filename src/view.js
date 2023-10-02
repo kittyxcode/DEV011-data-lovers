@@ -39,7 +39,11 @@ export const renderItems = (data) => {
   return ulElement;
 };
 
-export const renderTotalNumberOfPokemons{
-
-  
+export const renderTotalNumberOfPokemons= (numberOfPokemons)=>{
+  const liElement = document.createElement("li");
+  liElement.id= "count-pokemon";
+  liElement.className="caja";
+  liElement.setAttribute("data-testid", "count-pokemon");
+  liElement.innerText= `Pokemones: ${numberOfPokemons}`;
+  return liElement;
 }

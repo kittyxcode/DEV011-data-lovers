@@ -2,6 +2,7 @@ import { renderItems } from "./view.js";
 import { filterData, computeStats } from "./dataFunctions.js";
 import { ordenBy } from "./dataFunctions.js";
 import data from "./data/pokemon/pokemon.js";
+import { renderTotalNumberOfPokemons } from "./view.js";
 
 //data que usaremos
 let pokemones = data.pokemon;
@@ -14,6 +15,7 @@ const cerrar = document.querySelector("#cerrar");
 const ordenByController= document.querySelector("#select-sort");
 const ulElement = document.querySelector("#tarjetas");
 const filtro = document.getElementById("filter-by");
+const totalPokemonesNum = document.getElementById("count-pokemon");
 
 
 //update ul element...render
@@ -34,33 +36,22 @@ filtro.addEventListener("change", () => {
   const ulElement = document.querySelector("#tarjetas");
   const renderPokemons = renderItems(pokemones);
   ulElement.replaceWith(renderPokemons);
-
-
-
-  
   const totalPokemones = computeStats(pokemones);
   const totalPokemonesNum = document.getElementById("count-pokemon");
-  totalPokemonesNum.textContent = `Pokemones: ${totalPokemones}`;
- 
+  totalPokemonesNum.replaceWith(renderTotalNumberOfPokemons(totalPokemones));
 });
 
 ordenByController.addEventListener("change",()=>{
   const tipoPokemon = filtro.value;
   pokemones = filterData(data.pokemon, tipoPokemon);
-
   ordenBy(pokemones, ordenByController.value);
-  
-
-
   const ulElement = document.querySelector("#tarjetas");
-  const prueba = renderItems(pokemones);
-  ulElement.replaceWith(prueba);
+  const renderPokemons = renderItems(pokemones);
+  ulElement.replaceWith(renderPokemons);
   const totalPokemones = computeStats(pokemones);
-  console.log(totalPokemones);
   const totalPokemonesNum = document.getElementById("count-pokemon");
-  totalPokemonesNum.textContent = `Pokemones: ${totalPokemones}`;
+  totalPokemonesNum.replaceWith(renderTotalNumberOfPokemons(totalPokemones));
 })
-
 
 const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", () => {
@@ -73,3 +64,4 @@ resetButton.addEventListener("click", () => {
   const filtroDefault = document.getElementById("filter-by");
   filtroDefault.value = "default";
 });
+
