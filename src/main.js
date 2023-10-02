@@ -27,7 +27,7 @@ cerrar.addEventListener("click", () => {
   nav.classList.remove("visible");
 });
 
-filtro.addEventListener("change", () => {
+function updatePokemonOnScreen() {
   const tipoPokemon = filtro.value;
   pokemones = filterData(data.pokemon, tipoPokemon);
   ordenBy(pokemones, ordenByController.value);
@@ -37,27 +37,14 @@ filtro.addEventListener("change", () => {
   const totalPokemones = computeStats(pokemones);
   const totalPokemonesNum = document.getElementById("count-pokemon");
   totalPokemonesNum.replaceWith(renderTotalNumberOfPokemons(totalPokemones));
-});
+}
 
-ordenByController.addEventListener("change", () => {
-  const tipoPokemon = filtro.value;
-  pokemones = filterData(data.pokemon, tipoPokemon);
-  ordenBy(pokemones, ordenByController.value);
-  const ulElement = document.querySelector("#tarjetas");
-  const renderPokemons = renderItems(pokemones);
-  ulElement.replaceWith(renderPokemons);
-  const totalPokemones = computeStats(pokemones);
-  const totalPokemonesNum = document.getElementById("count-pokemon");
-  totalPokemonesNum.replaceWith(renderTotalNumberOfPokemons(totalPokemones));
-});
+filtro.addEventListener("change", updatePokemonOnScreen);
+ordenByController.addEventListener("change", updatePokemonOnScreen);
 
 const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", () => {
   filtro.value = "default";
   ordenByController.value = "default";
-  pokemones = data.pokemon;
-  ulElement.replaceWith(renderPokemons);
-  const totalPokemones = computeStats(pokemones);
-  const totalPokemonesNum = document.getElementById("count-pokemon");
-  totalPokemonesNum.replaceWith(renderTotalNumberOfPokemons(totalPokemones));
+  updatePokemonOnScreen();
 });
