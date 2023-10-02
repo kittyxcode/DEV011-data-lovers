@@ -54,6 +54,18 @@ filtro.addEventListener("change", (event) => {
  
 });
 
+const resetButton = document.getElementById("reset-button");
+resetButton.addEventListener("click", () => {
+  pokemones = data.pokemon;
+  const ulElement = document.querySelector("#tarjetas");
+  ulElement.replaceWith(prueba);
+  const totalPokemones = computeStats(pokemones);
+  const totalPokemonesNum = document.getElementById("count-pokemon");
+  totalPokemonesNum.textContent = `Pokemones: ${totalPokemones}`;
+  const filtroDefault = document.getElementById("filter-by");
+  filtroDefault.value = "default";
+});
+
 
 //function LoadAllPokemons(){}
 
