@@ -30,7 +30,8 @@ export const renderItems = (data) => {
         </dl>
           </div>
         </div>
-    </div>`
+    </div>`;
+    liElement.className="tarjetas";
     ulElement.appendChild(liElement);
   });
   ulElement.classList.add("tarjetas");

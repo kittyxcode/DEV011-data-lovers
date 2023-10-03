@@ -34,7 +34,7 @@
       <nav class="nav" id="nav">
         <button class="cerrar-menu" id="cerrar">Cerrar</button>
         <ul class="nav-list">
-          <li>
+          <li class="none">
             <label for="filter-by"></label>
             <select name="atri-pokemon" id="filter-by" data-testid="filter-by">
 
@@ -60,7 +60,7 @@
               <option value="fairy">Fairy</option>
             </select>
           </li>
-          <li>
+          <li class="none">
             <label for="select-sort"></label>
             <select
               name="atri-pokemon"
@@ -74,7 +74,7 @@
               <option value="desc">Nro desc</option>
             </select>
           </li>
-          <li>
+          <li class="none">
             <button id="reset-button" data-testid="button-clear" type="button">
               Limpiar
             </button>
@@ -90,7 +90,7 @@
       <div class="contenedor-c">
         <section id="root">
           <ul id="tarjetas">
-            <li itemscope itemtype="pokemon">
+            <li itemscope itemtype="pokemon" class="none">
               <dt>Número:</dt>
               <dd itemprop="num"></dd>
               <dt>Nombre:</dt>
