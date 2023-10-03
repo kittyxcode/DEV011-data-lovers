@@ -19,10 +19,10 @@ header{
 }
 
 .pokedex-imagen {
-  width: 8rem; /* Ancho deseado */
-  height: auto; /* Altura automática para mantener la proporción original */
+  width: 8rem; 
+  height: auto; 
   position: absolute;
-  top:1rem; /* Coloca el elemento 50 píxeles desde la parte superior del elemento padre */
+  top:1rem; 
   right:5rem;
 }
 
@@ -51,15 +51,13 @@ header{
   justify-content: center; /* Centrar horizontalmente */
   align-items: center; /* Centrar verticalmente */
 }
+
 .tarjetas li{
   margin: 0.5rem; /* Espacio entre los elementos */
-  
- 
   /* Borde opcional para resaltar cada elemento */
 }
 
 .tarjetas li div{
-
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
@@ -67,19 +65,30 @@ header{
 }
 .card-side.back {
   transform: rotateY(-180deg);
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/374756/pkmngo-pokeballclosed.png');
+  background-image: url('https://raw.githubusercontent.com/isadora-vargasg/DEV011-data-lovers/main/pokebola-atras2.png');
   background-size: cover;
-
-
   /* background-color: #4158D0;
   background-image: linear-gradient(43deg, #4158D0 0%,#C850C0 46%, #FFCC70 100%); */
 }
 .card-side.front {
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/374756/pkmngo-pokeball.png');
   background-size: cover; 
-
   /* background-color: #0093E9;
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+}
+
+dt{
+  font-family:'Saira', sans-serif;
+  font-size:1rem;
+  text-align: center;
+}
+dd{
+  font-family:'Saira', sans-serif;
+  font-size:1rem;
+  text-align: center;
+}
+dd[itemprop="name"] {
+  font-weight: bold;
 }
 
 .card:hover .card-side.front {
@@ -108,8 +117,8 @@ header{
   left: 0;
   width: 100%;
   padding: 2rem;
-  color: 
-rgb(37,80,0);
+  color:#2F2E9A;
+  font-family:'Saira', sans-serif;
 }
 
 @media screen and (max-width:650px){
@@ -151,6 +160,7 @@ rgb(37,80,0);
   background-color: #ffffff; /* Color de fondo del rectángulo */
   border:0.5rem solid #41b1a5;
   overflow: auto; /* Evita que el rectángulo se desborde de la ventana */
+  font-family:'Saira', sans-serif;
 }
 .contenedor-f {
   position: static;
@@ -191,23 +201,6 @@ rgb(37,80,0);
   font-family:'Saira', sans-serif;
   }
 #reset-button:hover {
-  background-color: #f87e68;
-  color: #000000;
-  border: 0.1rem solid #000000;
-} 
-
-#calculo-stats {
-  background-color: #FFCE31;
-  color: #2F2E9A;
-  border: 0.1rem solid #2F2E9A;
-  align-items: center;
-  padding: 0.2rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-family:'Saira', sans-serif;
-  }
-#calculo-stats:hover {
   background-color: #f87e68;
   color: #000000;
   border: 0.1rem solid #000000;
