@@ -1,5 +1,5 @@
 import { computeStats, ordenBy, filterData } from "../src/dataFunctions.js";
-import { data as fakeData } from "./data.js";
+import { datapoke as fakeData } from "./data.js";
 
 test("computeStats cuenta correctamente la cantidad de Pokémon o sea 10", () => {
   const resultado = computeStats(fakeData.pokemon);
